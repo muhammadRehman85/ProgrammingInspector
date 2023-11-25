@@ -3,7 +3,8 @@ const styles = StyleSheet.create({
     // --------WRAPPER------------
   Wrapper: {
     flex: 1,
-    backgroundColor: "#FEC606",
+    backgroundColor: "#03045E",
+    
     paddingTop:50
     ,paddingLeft:10,
     paddingRight:10,

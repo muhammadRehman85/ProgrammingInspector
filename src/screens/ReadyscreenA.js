@@ -12,12 +12,17 @@ const ReadyQuiz = ({ navigation ,route}) => {
     // ------wrapper-------
     <View style={styles.startWrapper}>
       <View style={styles.upperSection}>
-        <Pressable onPress={() => navigation.navigate("Salectlanguage")}>
+        <Pressable onPress={() => navigation.navigate("CppTest")}>
           <View style={styles.backbtn}>
             <Text style={styles.backtxt}>Go Back</Text>
           </View>
         </Pressable>
-       
+        <View style={styles.imageWrapper}>
+          <Image
+            style={styles.img}
+            source={require("../../assets/startQuiz.png")}
+          />
+        </View>
         <View style={styles.headingSection}>
           <Text style={{ color: "white", fontSize: 15, fontWeight: "bold" }}>
             Today's
@@ -26,7 +31,7 @@ const ReadyQuiz = ({ navigation ,route}) => {
             Super Quiz
           </Text>
           <Text style={{ color: "white", fontSize: 12 }}>
-            Play Quizzy kids and Test Your Knowledge
+            Play Quizzy kids and Test Your CS Knowledge
           </Text>
         </View>
       </View>

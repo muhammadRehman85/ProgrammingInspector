@@ -3,7 +3,7 @@ const styles = StyleSheet.create({
     // --------WRAPPER------------
   startWrapper: {
     flex: 1,
-    backgroundColor: "#FEC606",
+    backgroundColor: "#03045E",
   },
 //   ---------UPPER SECTION-------
   upperSection: {
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   backbtn: {
     width: 70,
     height: 30,
-    borderColor:'#004aad',
+    borderColor:'#CAF0F8',
     borderRadius:10,
     marginTop: 40,
     marginLeft: 10,
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     borderWidth:2,
   },
   backtxt: {
-    color: "#004aad",
+    color: "#CAF0F8",
     fontSize: 13,
     fontWeight:'bold'
   },

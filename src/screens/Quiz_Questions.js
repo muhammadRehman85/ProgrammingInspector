@@ -12,33 +12,40 @@ const Quiz_Questions = ({ navigation, route }) => {
   // -------Quiz title------------
   const title = route.params.title;
   const [progress, setProgress] = useState(0); // Change this value to set the progress
-  const progressBarColor = "#004aad";
+  const progressBarColor = "#FCA311";
   const allQuestion = data;
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [correctOption, setCorrectOption] = useState(null);
   const [currentSelectedOption, setCurrentSelectedOption] = useState(null);
   const [isDisabledOption, setisDisabledOption] = useState(false);
   const [score, setScore] = useState(0);
+
   const [showNextBtn, setshowNextBtn] = useState(false);
-  const [disabled, setdisabled] = useState(1);
+  // const [disabled, setdisabled] = useState(1);
   // ----------validate Answer------------
 
-  useEffect(() => {
+  // useEffect(() => {
     // This effect runs whenever correctOption changes
-    if (currentSelectedOption !== null) {
-      if (currentSelectedOption === correctOption) {
-        setProgress(progress + 0.1);
-        setisDisabledOption(true);
-      }
+  //   if (currentSelectedOption !== null) {
+  //     if (currentSelectedOption === correctOption) {
+  //       setProgress(progress + 0.1);
+  //       setisDisabledOption(true);
+  //     }
 
-      setshowNextBtn(true);
-    }
-  }, [correctOption, currentSelectedOption]);
+  //     setshowNextBtn(true);
+  //   } 
+  // }, [correctOption, currentSelectedOption]);
 
   const validateAnswer = (selectedOption) => {
     const correct_option = allQuestion[currentQuestionIndex].correct_option;
     setCurrentSelectedOption(selectedOption);
     setCorrectOption(correct_option);
+    setisDisabledOption(true)
+    setshowNextBtn(true);
+
+    if(selectedOption===correct_option){
+      setScore(score+1)
+    }
   };
   // show next button
   const handleNext = () => {
@@ -49,14 +56,15 @@ const Quiz_Questions = ({ navigation, route }) => {
       setisDisabledOption(false);
       setshowNextBtn(false);
       setProgress(0);
-      const newDisabledValue = disabled + 1;
-setdisabled(newDisabledValue);
-navigation.navigate("Quiz", { disabled: disabled});
+//       const newDisabledValue = disabled + 1;
+// setdisabled(newDisabledValue);
+
+navigation.navigate("Result", { score:score});
 // console.log(disabled)
-    } else if (currentSelectedOption != correctOption) {
-      setshowNextBtn(true);
+  
     } else {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
+      // setshowNextBtn(true);
       setCorrectOption(null);
       setshowNextBtn(false);
       setisDisabledOption(false);
