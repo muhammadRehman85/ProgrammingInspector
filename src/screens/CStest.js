@@ -29,8 +29,8 @@ const CStest= ({ navigation }) => {
                   questions: item.questions,
                 })
               }
-              style={{margin:10,padding:20, width:'88%',borderWidth:1,borderRadius:10,borderBottomWidth:10,borderBottomWidth:5,borderBottomColor:"black",backgroundColor:"#03045E",}}>
-            <Text style ={{color:"white",}}>{item.title}</Text>
+              style={{margin:10,padding:20, width:'88%',borderWidth:1,borderRadius:10,borderBottomWidth:10,borderBottomWidth:5,borderBottomColor:"black",backgroundColor:"#FFBE0B",}}>
+            <Text style ={{color:"black",fontWeight: "bold"}}>{item.title}</Text>
           </TouchableOpacity>
   )}
         

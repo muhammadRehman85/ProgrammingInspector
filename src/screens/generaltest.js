@@ -1,12 +1,12 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
-import generalQuestion from "../components/generalQuestion";
+import GeneralQuestion from "../components/GeneralQuestion";
 
 
-const generaltest= ({ navigation }) => {
+const Generaltest= ({ navigation }) => {
   const Languages = [
-    { title: "History of pakistan", route: "ReadyScreen" ,questions:generalQuestion},
+    { title: "History of pakistan", route: "ReadyScreen" ,questions:GeneralQuestion},
     { title: "Geography", route: "ReadyScreen",questions:"" },
     { title: "Arts and Culture ", route: "ReadyScreen",questions:'' },
     { title: "Country", route: "ReadyScreen",questions:"" },
@@ -30,8 +30,8 @@ const generaltest= ({ navigation }) => {
                   questions: item.questions,
                 })
               }
-              style={{margin:10,padding:20, width:'88%',borderWidth:1,borderRadius:10,borderBottomWidth:10,borderBottomColor:"rgba(76, 209, 55,1.0)"}}>
-            <Text>{item.title}</Text>
+              style={{margin:10,padding:20, width:'88%',borderWidth:1,borderRadius:15,borderBottomWidth:5,borderBottomColor:"black",backgroundColor:"#FFBE0B",}}>
+            <Text style = {{color:"black", fontWeight: "bold",}}>{item.title}</Text>
           </TouchableOpacity>
   )}
         
@@ -40,4 +40,4 @@ const generaltest= ({ navigation }) => {
   );
 };
 
-export default generaltest;
+export default Generaltest;

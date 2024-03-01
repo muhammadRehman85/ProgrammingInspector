@@ -49,7 +49,6 @@ const BasicQuestions = [
       options: ["V", " H", "Y", "X"],
       correct_option: "V"
     },
-    
   ];
   
   export default BasicQuestions;

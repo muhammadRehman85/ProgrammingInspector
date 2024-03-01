@@ -10,10 +10,10 @@ const SelectLanguage = () => {
   const navigation = useNavigation();
 
   const Languages = [
-    { title: "Islamic", route: "islamictest" },
+    { title: "Islamic", route: "Islamictest" },
     { title: "English", route: "EnglishTest" },
     { title: "Computer Science", route: "CStest" },
-    { title: "General Knowledge", route: "generaltest" },
+    { title: "General Knowledge", route: "Generaltest" },
     { title: "Science", route: "Sciencetest" },
     { title: "Mathematics", route: "Mathtest" },
   ];
@@ -31,12 +31,12 @@ const SelectLanguage = () => {
         borderRadius: 10,
         borderBottomWidth: 5,
         borderBottomColor: "black",
-        backgroundColor: "#03045E",
+        backgroundColor: "#FFBE0B",
         
         
       }}
     >
-      <Text style ={{color:"white"}}>{item.title}</Text>
+      <Text style ={{color:"black", fontWeight: "bold", }}>{item.title}</Text>
     </TouchableOpacity>
   );
 
@@ -47,12 +47,14 @@ const SelectLanguage = () => {
           style={{
             width: "100%",
             height: 80,
-            backgroundColor: "#03045E",
+            backgroundColor: "#FFBE0B",
             alignItems: "center",
             justifyContent: "center",
+            borderBottomWidth: 5,
+        borderBottomColor: "black",
           }}
         >
-          <Text style={{ fontWeight: "bold", fontSize: 18, color: "white",  }}>
+          <Text style={{ fontWeight: "bold", fontSize: 18, color: "black",  }}>
             QUIZZY KIDS
           </Text>
         </View>
@@ -60,6 +62,7 @@ const SelectLanguage = () => {
           data={Languages}
           keyExtractor={(item) => item.title}
           renderItem={renderItem}
+          
         />
       </View>
     </>

@@ -12,7 +12,7 @@ const Quiz_Questions = ({ navigation, route }) => {
   // -------Quiz title------------
   const title = route.params.title;
   const [progress, setProgress] = useState(0); // Change this value to set the progress
-  const progressBarColor = "#FCA311";
+  const progressBarColor = "black";
   const allQuestion = data;
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [correctOption, setCorrectOption] = useState(null);
@@ -46,6 +46,9 @@ const Quiz_Questions = ({ navigation, route }) => {
     if(selectedOption===correct_option){
       setScore(score+1)
     }
+
+
+
   };
   // show next button
   const handleNext = () => {
@@ -72,11 +75,11 @@ navigation.navigate("Result", { score:score});
   };
 
   return (
-    <View style={styles.Wrapper}>
-   
+    <View style={{ flex: 1, backgroundColor:"#FFBE0B" }}>
+   <View style={styles.Wrapper}></View>
       {/* -----------PROGRESS BAR---------- */}
       <View style={{ alignItems: "center", paddingBottom: 10 }}>
-        <Text style={{ fontSize: 20, fontWeight: "bold", color: "#004aad" }}>
+        <Text style={{ fontSize: 20, fontWeight: "bold", color: "black" }}>
           {title}
         </Text>
       </View>
@@ -139,7 +142,7 @@ navigation.navigate("Result", { score:score});
               onPress={() => validateAnswer(option)}
             >
               <Text
-                style={{ fontSize: 16, letterSpacing: 2, color: "#004aad" }}
+                style={{ fontSize: 16, letterSpacing: 2, color: "black" }}
               >
                 {option}
               </Text>

@@ -1,4 +1,4 @@
-const generalQuestion=[
+const GeneralQuestion=[
 
 
 
@@ -11,4 +11,4 @@ const generalQuestion=[
 
 
 ];
-export default generalQuestion;
+export default GeneralQuestion;

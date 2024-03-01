@@ -10,7 +10,7 @@ const Home = ({ navigation }) => {
       </View>
       {/* Add your image here */}
       <Image
-          source={require('../../assets/quizp.png')} 
+          source={require} 
           style={styles.image}
         />
 
@@ -31,13 +31,13 @@ const Home = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#03045E',
+    backgroundColor: '#FFBE0B',
   },
   upperSection: {
     flex: 0.70,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#03045E',
+    backgroundColor: '#FFBE0B',
   },
   lowerSection: {
     flex: 0.30,
@@ -46,9 +46,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
-    padding: 30,
+    
   },
   title: {
+    padding: 30,
     fontSize: 24,
     marginBottom: 20,
   },
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginTop: 20,
-    backgroundColor: '#03045E', // Set the button background color to white
+    backgroundColor: '#FFBE0B',
   },
   image:{
     width: "60%",
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 20 ,
      fontWeight: "bold",
-    color: "white",
+    color: "black",
   
     
     
